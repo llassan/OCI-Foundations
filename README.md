@@ -36,7 +36,7 @@ AuthZ - What permissions do you have?
 Authentication has to deal with identity or who someone is, while authorization has to deal with permission or what someone is allowed to do.
 
 
-Identity Domains: A container for your users and groups.
+### Identity Domains: A container for your users and groups.
 
 An identity domain represents:
  - a user population in OCI
@@ -57,3 +57,38 @@ So what OCI does is it provides its own assigned identifier, which is called Ora
 ocid1 is just the type of resource, realm is basically set of regions that share the same characteristics. So there's a commercial realm, there is a government realm, etc. Resource type is kind of the type of the resource. It's a compute instance or it's a block storage device or et cetera.
 
 And then region is basically the region code here. It used to be a three-character code, now it's much longer string. And then there is a unique ID here, which is unique to the resource you create.
+
+**So what are some of the examples?**
+
+Well, your account also has an OCID, so you see that here tenancy and you can see the syntax here starting with ocid1.
+
+Now, of course, account is across multiple regions. So you don't have a region identifier here. Its realm is ocid1, and then there is the unique identifier. In case of block volume, you see the region, because block volume is specific to a particular region. So you see the region key here, and then the unique identifier.
+
+<img width="1085" height="594" alt="image" src="https://github.com/user-attachments/assets/08113494-989a-4adc-8da5-a5136a42affc" />
+
+### Compartments
+
+When you open an account in OCI, you get a tenancy. That's another fancy name for an account. And we also give you a Root Compartment. So think of Root Compartment as this logical construct where you can keep all of your cloud resources. And then what you could do is, you could create your own individual compartments, like you see here.
+
+There is a network compartment. There's a storage compartment. And the idea is, you create these for isolation and controlling access. And you could keep a collection of related resources in specific compartments. So the network resource has-- a network compartment has network resources, and storage compartment has storage resources.
+
+Now, keep in mind, Root Compartment, as I said earlier, can hold all of the cloud resources. So it can be sort of a kitchen sink. You could put everything in there. But the best practice is to create dedicated compartments to isolate resources.
+
+There is a network compartment. There's a storage compartment. And the idea is, you create these for isolation and controlling access. And you could keep a collection of related resources in specific compartments. So the network resource has-- a network compartment has network resources, and storage compartment has storage resources.
+
+Now, keep in mind, Root Compartment, as I said earlier, can hold all of the cloud resources. So it can be sort of a kitchen sink. You could put everything in there. But the best practice is to create dedicated compartments to isolate resources. 
+
+<img width="1128" height="645" alt="image" src="https://github.com/user-attachments/assets/0c9b2c86-f0c0-4fba-9197-7b5e37367db3" />
+
+So first thing is, each resource you create belongs to a single compartment. So you create a virtual machine, for example. It goes to Compartment A. It cannot go to Compartment B. Again, you have to move it from Compartment A, or delete, and recreate in Compartment B. Keep in mind, each resource belongs to a single compartment.
+
+<img width="1157" height="588" alt="image" src="https://github.com/user-attachments/assets/a8101235-b3a6-4e05-9cf0-d7b92f30afdd" />
+
+The reason why you want to compartmentalize your resources is exactly shown on this slide. Why you use compartments in the first place is for controlling access and isolation. So the way you do that is, you have the resources, let's say in this case a block storage, kept in Compartment A. You don't want those to be used by everyone. You want those to be used only by the compute admins and storage admins.
+
+So you create those admins as users and groups, write these policies, and they can access these resources in this compartment. So it's very important. Do not put all of your resources in the Root Compartment. Create resource-specific compartments, or whichever way you want to divide your tenancies, and put resources accordingly.
+
+<img width="1010" height="604" alt="image" src="https://github.com/user-attachments/assets/de50b993-4826-487e-828c-8ca1e4985b8a" />
+
+
+
