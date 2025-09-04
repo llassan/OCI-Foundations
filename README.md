@@ -74,10 +74,6 @@ There is a network compartment. There's a storage compartment. And the idea is, 
 
 Now, keep in mind, Root Compartment, as I said earlier, can hold all of the cloud resources. So it can be sort of a kitchen sink. You could put everything in there. But the best practice is to create dedicated compartments to isolate resources.
 
-There is a network compartment. There's a storage compartment. And the idea is, you create these for isolation and controlling access. And you could keep a collection of related resources in specific compartments. So the network resource has-- a network compartment has network resources, and storage compartment has storage resources.
-
-Now, keep in mind, Root Compartment, as I said earlier, can hold all of the cloud resources. So it can be sort of a kitchen sink. You could put everything in there. But the best practice is to create dedicated compartments to isolate resources. 
-
 <img width="1128" height="645" alt="image" src="https://github.com/user-attachments/assets/0c9b2c86-f0c0-4fba-9197-7b5e37367db3" />
 
 So first thing is, each resource you create belongs to a single compartment. So you create a virtual machine, for example. It goes to Compartment A. It cannot go to Compartment B. Again, you have to move it from Compartment A, or delete, and recreate in Compartment B. Keep in mind, each resource belongs to a single compartment.
@@ -90,5 +86,9 @@ So you create those admins as users and groups, write these policies, and they c
 
 <img width="1010" height="604" alt="image" src="https://github.com/user-attachments/assets/de50b993-4826-487e-828c-8ca1e4985b8a" />
 
+Keep in mind that resources can also be moved from one compartment to another.
 
+ Another concept, which is very important to grasp is the compartments are global constructs, like everything in identity. So resources from multiple regions can be in the same compartment. So when you go to Phoenix, you see this compartment existing. You go to Ashburn, you see the same compartment.
+
+Now, you can write policies to prevent users from accessing resources in a specific region. You could do that. But keep in mind, all of the compartments you create are global, and they are available in every region you have access to.
 
