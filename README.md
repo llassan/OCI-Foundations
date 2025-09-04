@@ -44,5 +44,6 @@ An identity domain represents:
 
 So how does this work in practice? Well, what we do first is we create an identity domain, and then we create users and groups within that identity domain. And then we write policies against those groups, and policies are scoped to a tenancy, an account, or a compartment.
 
-And of course, the resources are available within a compartment. And again, compartment is kind of a logical isolation for resources. So this is how the whole service works. 
+And of course, the resources are available within a compartment. And again, compartment is kind of a logical isolation for resources. This is how the whole service works. 
 
+So you put these groups in one of the pre-determined roles, and then you assign some permissions against those roles. So this is how the service works in a nutshell.
