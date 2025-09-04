@@ -54,3 +54,6 @@ So what OCI does is it provides its own assigned identifier, which is called Ora
 
 <img width="1174" height="620" alt="image" src="https://github.com/user-attachments/assets/ef797a93-e64b-42e4-b96f-06c3f68e3860" />
 
+ocid1 is just the type of resource, realm is basically set of regions that share the same characteristics. So there's a commercial realm, there is a government realm, etc. Resource type is kind of the type of the resource. It's a compute instance or it's a block storage device or et cetera.
+
+And then region is basically the region code here. It used to be a three-character code, now it's much longer string. And then there is a unique ID here, which is unique to the resource you create.
