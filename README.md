@@ -92,3 +92,8 @@ Keep in mind that resources can also be moved from one compartment to another.
 
 Now, you can write policies to prevent users from accessing resources in a specific region. You could do that. But keep in mind, all of the compartments you create are global, and they are available in every region you have access to.
 
+Compartments can also be nested. So you have up to six levels nesting provided by compartments.
+
+And then, finally, you could set quotas and budgets on compartments. So you could say that, my particular compartment, you cannot create a bare metal machine. Or you cannot create an Exadata resource. So you could control it like that. And then you could also create budgets on compartments. So you could say that, if the usage in a particular compartment goes beyond $1,000, you'd get flagged, and you get notified. So you could do that.
+
+So that's Compartments for you. It's a very unique feature within OCI. We believe it helps keep your tenancies much better organized. And it really supports your current ID hierarchy and design. 
