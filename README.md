@@ -36,7 +36,7 @@ AuthZ - What permissions do you have?
 Authentication has to deal with identity or who someone is, while authorization has to deal with permission or what someone is allowed to do.
 
 
-Identity Domains:
+Identity Domains: A container for your users and groups.
 
 An identity domain represents:
  - a user population in OCI
